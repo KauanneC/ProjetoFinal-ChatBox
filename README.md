@@ -19,3 +19,12 @@ OrbitChat é um projeto de chat em tempo real feito com Node.js e a biblioteca S
 2. Inicie o servidor:
     ```bash
     yarn start
+
+### Usando Npm
+1. Instale as dependências com o comando:
+   ```bash
+   npm install
+
+2. Inicie o servidor:
+    ```bash
+    npm start
