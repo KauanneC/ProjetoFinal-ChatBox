@@ -89,36 +89,35 @@ export default function Register() {
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
-            {/* <img src={Logo} alt="logo" /> */}
-            <h1>snappy</h1>
+            <h1>OrbitChat</h1>
           </div>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Nome de Usuário"
             name="username"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="E-mail"
             name="email"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Senha"
             name="password"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Confirme a Senha"
             name="confirmPassword"
             onChange={(e) => handleChange(e)}
           />
-          <button type="submit">Create User</button>
+          <button type="submit">Criar Usuário</button>
           <span>
-            Already have an account ? <Link to="/login">Login.</Link>
+            Sua conta já existe ? <Link to="/login">Login.</Link>
           </span>
         </form>
       </FormContainer>
@@ -135,7 +134,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background-color: #216566;
   .brand {
     display: flex;
     align-items: center;
@@ -161,18 +160,18 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #47A37C;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
     font-size: 1rem;
     &:focus {
-      border: 0.1rem solid #997af0;
+      border: 0.1rem solid #578BB0;
       outline: none;
     }
   }
   button {
-    background-color: #4e0eff;
+    background-color: #47A37C;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -182,14 +181,14 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #578BB0;
     }
   }
   span {
     color: white;
     text-transform: uppercase;
     a {
-      color: #4e0eff;
+      color: #47A37C;
       text-decoration: none;
       font-weight: bold;
     }
