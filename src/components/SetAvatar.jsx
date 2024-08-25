@@ -28,7 +28,7 @@ export default function SetAvatar() {
 
   const setProfilePicture = async () => {
     if (selectedAvatar === undefined) {
-      toast.error("Please select an avatar", toastOptions);
+      toast.error("Por favor, selecione um avatar", toastOptions);
     } else {
       const user = await JSON.parse(
         localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
@@ -47,7 +47,7 @@ export default function SetAvatar() {
         );
         navigate("/");
       } else {
-        toast.error("Error setting avatar. Please try again.", toastOptions);
+        toast.error("Erro ao selecionar um avatar. Tente novamente.", toastOptions);
       }
     }
   };
@@ -73,7 +73,7 @@ export default function SetAvatar() {
       ) : (
         <Container>
           <div className="title-container">
-            <h1>Pick an Avatar as your profile picture</h1>
+            <h1>Escolha um Avatar como sua foto de perfil</h1>
           </div>
           <div className="avatars">
             {avatars.map((avatar, index) => {
@@ -94,7 +94,7 @@ export default function SetAvatar() {
             })}
           </div>
           <button onClick={setProfilePicture} className="submit-btn">
-            Set as Profile Picture
+          Definir como foto de perfil
           </button>
           <ToastContainer />
         </Container>
@@ -109,7 +109,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #131324;
+  background-color: #216566;
   height: 100vh;
   width: 100vw;
 
@@ -140,11 +140,11 @@ const Container = styled.div`
       }
     }
     .selected {
-      border: 0.4rem solid #4e0eff;
+      border: 0.4rem solid #47A37C;
     }
   }
   .submit-btn {
-    background-color: #4e0eff;
+    background-color: #47A37C;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -154,7 +154,7 @@ const Container = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #578BB0;
     }
   }
 `;
