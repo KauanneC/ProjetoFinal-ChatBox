@@ -1,4 +1,4 @@
-# OrbiChat
+# OrbitChat
 
 OrbitChat é um projeto de chat em tempo real feito com Node.js e a biblioteca Socket.io.
 
