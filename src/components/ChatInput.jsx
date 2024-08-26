@@ -27,16 +27,10 @@ export default function ChatInput({ handleSendMsg }) {
 
   return (
     <Container>
-      <div className="button-container">
-        <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
-        </div>
-      </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
           type="text"
-          placeholder="type your message here"
+          placeholder="Digite sua mensagem aqui"
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
@@ -49,54 +43,13 @@ export default function ChatInput({ handleSendMsg }) {
 }
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: #042A2ACD;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
     gap: 1rem;
-  }
-  .button-container {
-    display: flex;
-    align-items: center;
-    color: white;
-    gap: 1rem;
-    .emoji {
-      position: relative;
-      svg {
-        font-size: 1.5rem;
-        color: #ffff00c8;
-        cursor: pointer;
-      }
-      .emoji-picker-react {
-        position: absolute;
-        top: -350px;
-        background-color: #080420;
-        box-shadow: 0 5px 10px #9a86f3;
-        border-color: #9a86f3;
-        .emoji-scroll-wrapper::-webkit-scrollbar {
-          background-color: #080420;
-          width: 5px;
-          &-thumb {
-            background-color: #9a86f3;
-          }
-        }
-        .emoji-categories {
-          button {
-            filter: contrast(0);
-          }
-        }
-        .emoji-search {
-          background-color: transparent;
-          border-color: #9a86f3;
-        }
-        .emoji-group:before {
-          background-color: #080420;
-        }
-      }
-    }
   }
   .input-container {
     width: 100%;
@@ -113,10 +66,6 @@ const Container = styled.div`
       border: none;
       padding-left: 1rem;
       font-size: 1.2rem;
-
-      &::selection {
-        background-color: #9a86f3;
-      }
       &:focus {
         outline: none;
       }
@@ -127,7 +76,7 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #9a86f3;
+      background-color: #578BB0;
       border: none;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;

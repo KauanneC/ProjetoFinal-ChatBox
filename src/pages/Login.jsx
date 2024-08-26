@@ -69,7 +69,7 @@ export default function Login() {
           </div>
           <input
             type="text"
-            placeholder="E-mail"
+            placeholder="Nome de Usuário"
             name="username"
             onChange={(e) => handleChange(e)}
             min="3"
